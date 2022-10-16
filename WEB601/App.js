@@ -7,7 +7,8 @@ const App = () => {
       <div className="emperature-display-container">
         <div className='temperature-display'>10°C</div>
         <div className="button-container">
-          <button>+</button>
+          <button <button onClick={() => setTempratureValue(tempratureValue + 1)}>
+          >+</button>
           <button>-</button>
         </div>
       </div>
