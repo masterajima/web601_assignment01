@@ -1,41 +1,39 @@
-import React, { useState } from "react";
-import React from "react";
-const App = () => {
-  const [tempratureValue, setTempratureValue] = useState(10);
-  const [temperatureColor, setTemperatureColor] = useState("cold");
-  const increaseTemperature = () => {
-    setTempratureValue(tempratureValue + 1);
-    setTempratureValue(newTemperature);
-    if (newTemperature >= 15) {
-      setTemperatureColor("hot");
-    }
-  };
-  const decreaseTemperature = () => {
-    setTemperatureValue(tempratureValue - 1);
-    setTemperatureValue(newTemperature);
-    if (newTemperature < 15) {
-      setTemperatureColor("cold");
-    }
-  };
 
-  return (
-    <div className="app-container">
-      <div className="temperature-display-container">
-        <div className={`temperature-display ${temperatureColor}`}>
-          {tempratureValue}°C
-        </div>
-      </div>
-      <div className="temperature-display">{tempratureValue}°C</div>
-      <div className="button-container">
-        <button></button>
-        <button onClick={() => setTempratureValue(tempratureValue + 1)}>
-          +
-        </button>
-        <button onClick={() => setTempratureValue(tempratureValue - 1)}>
-          -
-        </button>
-      </div>
-    </div>
-  );
+import React, { useState } from 'react';
+
+const App = () => {
+	const [temperatureValue, setTemperatureValue] = useState(10);
+	const [temperatureColor, setTemperatureColor] = useState('cold');
+
+	const increaseTemperature = () => {
+		const newTemperature = temperatureValue + 1;
+		setTemperatureValue(newTemperature);
+
+		if (newTemperature >= 15) {
+			setTemperatureColor('hot');
+		}
+	};
+
+	const decreaseTemperature = () => {
+		const newTemperature = temperatureValue - 1;
+		setTemperatureValue(newTemperature);
+		if (newTemperature < 15) {
+			setTemperatureColor('cold');
+		}
+	};
+
+	return (
+		<div className='app-container'>
+			<div className='temperature-display-container'>
+				<div className={`temperature-display ${temperatureColor}`}>{temperatureValue}°C</div>
+			</div>
+			<div className='button-container'>
+				<button onClick={increaseTemperature}>+</button>
+				<button onClick={decreaseTemperature}>-</button>
+			</div>
+		</div>
+	);
 };
+
 export default App;
+  
