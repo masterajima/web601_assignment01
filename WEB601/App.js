@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import React from "react";
 const App = () => {
+   const [tempratureValue, setTempratureValue] = useState(10);
   return (
     <div className="app-container">
       <div className="emperature-display-container">
