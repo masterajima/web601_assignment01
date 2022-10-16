@@ -9,7 +9,7 @@ const App = () => {
         <div className="button-container">
           <button <button onClick={() => setTempratureValue(tempratureValue + 1)}>
           >+</button>
-          <button>-</button>
+          <button onClick={() => setTempratureValue(tempratureValue - 1)}>-</button>
         </div>
       </div>
     </div>
