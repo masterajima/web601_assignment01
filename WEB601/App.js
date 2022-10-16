@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="emperature-display-container">
-        <div className="temperature-display">10°C</div>
+        <div className='temperature-display'>10°C</div>
         <div className="button-container">
           <button>+</button>
           <button>-</button>
